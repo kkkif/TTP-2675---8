@@ -389,7 +389,7 @@ body.hidden {
   background: var(--bg-blue);
 }
 .header-btn:hover {
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.75);
+  box-shadow: 3px 3px 7px rgba(117, 146, 13, 0.75);
 }
 .header-btn:first-child {
   width: 82px;
@@ -455,6 +455,9 @@ body.hidden {
   border: 1px solid #FFEBCD;
   border-radius: 4px;
 }
+.header-bottom-btn:hover {
+  box-shadow: 4px 4px 5px rgba(143, 153, 108, 0.75);
+}
 .header-bottom-btn-wh {
   background: var(--bg-primary);
   padding: 10px 20px;
@@ -462,6 +465,9 @@ body.hidden {
   line-height: 40px;
   color: var(--color-secondary);
   border-radius: 4px;
+}
+.header-bottom-btn-wh:hover {
+  box-shadow: 4px 4px 3px rgba(130, 134, 114, 0.75);
 }
 @media (max-width: 450px) {
   .header-bottom-btn-wh {
@@ -526,27 +532,11 @@ body.hidden {
   margin-left: 20px;
 }
 .article ol {
-  position: relative;
+  background: url(../img/snake.png) no-repeat center right;
 }
-.article ol::after {
-  content: "";
-  position: absolute;
-  background: url(../img/snake.png) no-repeat center;
-  width: 355px;
-  height: 526px;
-  top: 50%;
-  transform: translateY(-65%);
-  left: 107%;
-}
-@media (max-width: 1150px) {
-  .article ol::after {
-    width: 366px;
-    left: 100%;
-  }
-}
-@media (max-width: 1000px) {
-  .article ol::after {
-    display: none;
+@media (max-width: 990px) {
+  .article ol {
+    background: none;
   }
 }
 .article .table {
@@ -629,4 +619,5 @@ body.hidden {
   margin: 0;
   font-size: 18px;
   line-height: 28px;
+  text-indent: 0;
 }/*# sourceMappingURL=main.css.map */
