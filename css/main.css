@@ -350,7 +350,7 @@ body.hidden {
   justify-content: center;
   gap: 30px;
   color: var(--color-whiteyellow);
-  margin-right: 50px;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .header .menu {
