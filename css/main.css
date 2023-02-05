@@ -82,6 +82,11 @@ h1::before {
   transform: translateY(-50%);
   left: -12%;
 }
+@media (max-width: 990px) {
+  h1::before {
+    display: none;
+  }
+}
 h1 span {
   color: var(--color-blue);
 }
@@ -123,6 +128,11 @@ h2::before {
   transform: translateY(-50%);
   left: -8%;
 }
+@media (max-width: 990px) {
+  h2::before {
+    display: none;
+  }
+}
 @media (max-width: 590px) {
   h2 {
     margin: 30px 0;
@@ -154,6 +164,11 @@ h3::before {
   top: 50%;
   transform: translateY(-50%);
   left: -8%;
+}
+@media (max-width: 990px) {
+  h3::before {
+    display: none;
+  }
 }
 @media (max-width: 590px) {
   h3 {
@@ -335,7 +350,6 @@ body.hidden {
   justify-content: center;
   gap: 30px;
   color: var(--color-whiteyellow);
-  margin-left: 700px;
   margin-right: 50px;
 }
 @media (max-width: 768px) {
@@ -450,6 +464,11 @@ body.hidden {
   border-radius: 4px;
 }
 @media (max-width: 450px) {
+  .header-bottom-btn-wh {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
   .header-bottom-btn {
     display: none;
   }
@@ -505,6 +524,30 @@ body.hidden {
 .article ul,
 .article ol {
   margin-left: 20px;
+}
+.article ol {
+  position: relative;
+}
+.article ol::after {
+  content: "";
+  position: absolute;
+  background: url(../img/snake.png) no-repeat center;
+  width: 355px;
+  height: 526px;
+  top: 50%;
+  transform: translateY(-65%);
+  left: 107%;
+}
+@media (max-width: 1150px) {
+  .article ol::after {
+    width: 366px;
+    left: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  .article ol::after {
+    display: none;
+  }
 }
 .article .table {
   width: 100%;
