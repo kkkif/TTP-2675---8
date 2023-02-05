@@ -15,9 +15,8 @@
   --bg-red: #E92139;
   --bg-blue: #F2FF93;
   --bg-blue-drk: #212941;
-  --bg-dark: #0D0D0D;
+  --bg-dark: #233D4C;
   --bg-greylight: #58544C;
-  --bg-grdark: #233D4C;
 }
 
 * {
@@ -71,6 +70,17 @@ h1 {
   font-size: 44px;
   line-height: 64px;
   text-align: start;
+  position: relative;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  width: 68px;
+  height: 70px;
+  background: url(../img/stars.png);
+  top: 50%;
+  transform: translateY(-50%);
+  left: -12%;
 }
 h1 span {
   color: var(--color-blue);
@@ -100,7 +110,18 @@ h2 {
   line-height: 34px;
   margin: 40px 0;
   color: var(--color-blue);
-  text-align: center;
+  text-align: left;
+  position: relative;
+}
+h2::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 40px;
+  background: url(../img/Bookmark.png) no-repeat center;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -8%;
 }
 @media (max-width: 590px) {
   h2 {
@@ -121,7 +142,18 @@ h3 {
   line-height: 34px;
   margin: 40px 0;
   color: var(--color-blue);
-  text-align: center;
+  text-align: left;
+  position: relative;
+}
+h3::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 40px;
+  background: url(../img/Bookmark.png) no-repeat center;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -8%;
 }
 @media (max-width: 590px) {
   h3 {
@@ -189,7 +221,12 @@ body.hidden {
   }
 }
 .header-top {
-  height: 112px;
+  height: 104px;
+}
+@media (max-width: 1350px) {
+  .header-top {
+    padding: 10px 10px;
+  }
 }
 @media (max-width: 590px) {
   .header-top {
@@ -203,7 +240,7 @@ body.hidden {
   top: 0;
   left: 0;
   right: 0;
-  padding: 30px 0;
+  padding: 25px 0;
   transition: 0.3s ease;
   background: var(--bg-dark);
   border-bottom: 2px solid #FFEBCD;
@@ -298,6 +335,8 @@ body.hidden {
   justify-content: center;
   gap: 30px;
   color: var(--color-whiteyellow);
+  margin-left: 700px;
+  margin-right: 50px;
 }
 @media (max-width: 768px) {
   .header .menu {
@@ -402,6 +441,14 @@ body.hidden {
   border: 1px solid #FFEBCD;
   border-radius: 4px;
 }
+.header-bottom-btn-wh {
+  background: var(--bg-primary);
+  padding: 10px 20px;
+  font-size: 18px;
+  line-height: 40px;
+  color: var(--color-secondary);
+  border-radius: 4px;
+}
 @media (max-width: 450px) {
   .header-bottom-btn {
     display: none;
@@ -418,7 +465,6 @@ body.hidden {
 
 .article {
   width: 100%;
-  position: relative;
   z-index: 2;
   background: var(--bg-dark);
   max-width: 800px;
